@@ -17,6 +17,10 @@ html {
     --progress: #1C64F2;
 }
 
+body {
+    min-width: 320px
+}
+
 .header {
     background-color: var(--bcg-gray);
 }
