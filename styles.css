@@ -15,7 +15,6 @@ html {
     --bcg-light_gray: #1F2A37;
     --border-gray: #374151;
     --progress: #1C64F2;
-
 }
 
 .header {
@@ -50,7 +49,6 @@ html {
     width: 100%;
     height: auto;
     padding-top: 5px;
-    
 }
 
 .navbar-desktop {
@@ -538,7 +536,9 @@ html {
     height: auto;
 }
 
-.event__event-content {
+.event-content {
+    display: flex;
+    flex-direction: column;
     gap: 4px;
 }
 
@@ -548,23 +548,18 @@ html {
     justify-content: space-between;
 }
 
-.event__progress {
-    display: flex;
-    margin-top: 4px;
+progress {
+    width: 100%;
+    height: 10px;
+    border: none;
 }
-
-.progress-highlight {
+ progress::-webkit-progress-bar {
+    background: var(--border-gray);
     border-radius: 2px;
+}
+ progress::-webkit-progress-value {
     background: var(--progress);
-    width: 85%;
-    height: 10px;
-}
-
-.progress-gray {
     border-radius: 2px;
-    background:  var(--border-gray);
-    width: 15%;
-    height: 10px;
 }
 
 .event__amount-text {
@@ -578,6 +573,7 @@ html {
 
 .event-amount__text--small {
     font-size: 12px;
+    text-align: right;
 }
 
 .event__amount-price {
