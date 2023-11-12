@@ -208,7 +208,8 @@ body {
 }
 
 .logo-item {
-    width: 20%;
+    min-width: 58px;
+    height: auto;
 }
 
 .carousel {
@@ -1107,7 +1108,7 @@ progress {
 
     .logo-item {
         height: 48px;
-    }
+     }
 
     .values {
         flex-direction: row;
