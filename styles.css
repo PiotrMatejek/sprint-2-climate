@@ -1147,6 +1147,7 @@ progress {
         display: block;
         align-self: center;
         width: 55%;
+        max-width: 700px;
     }
 
     .flowbite-article {
