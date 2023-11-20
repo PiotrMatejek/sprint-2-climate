@@ -31,16 +31,28 @@ const addActicveClass = (slide) => {
   slide.classList.add("header-content__img--active");
 };
 
+const colorDots = (dotArray) => {
+  for (const char of dotArray) {
+    char.setAttribute("src", "./images/dot-gray.png");
+  }
+}
+
 const showSlide1 = () => {
   addActicveClass(slide1);
+  dot1.setAttribute("src", "./images/dot-white.png");
+  colorDots([dot2, dot3])
 };
 
 const showSlide2 = () => {
   addActicveClass(slide2);
+  dot2.setAttribute("src", "./images/dot-white.png");
+  colorDots([dot1, dot3])
 };
 
 const showSlide3 = () => {
   addActicveClass(slide3);
+  dot3.setAttribute("src", "./images/dot-white.png");
+  colorDots([dot1, dot2])
 };
 
 dot1.addEventListener("click", () => {
@@ -51,12 +63,15 @@ dot1.addEventListener("click", () => {
 dot2.addEventListener("click", () => {
   activeSlide();
   showSlide2();
+  dot2.setAttribute("src", "./images/dot-white.png")
 });
 
 dot3.addEventListener("click", () => {
   activeSlide();
   showSlide3();
 });
+
+console.log(dot1.getAttribute("src"))
 
 // highlight button for donate in section Header and Event
 const headerBtn = document.getElementById("header-btn");
