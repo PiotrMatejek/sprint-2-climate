@@ -18,10 +18,34 @@
         <nav>
           <div class="navigation">
             <a class="navigation__logo" href="#">Logo</a>
-            <a class="navigation__link" href="#"
-              ><img class="navigation__icon" src="./images/burger.svg" alt="menu"
+            <a class="navigation__link" id="navIcon-el" href="#"
+              ><img
+                class="navigation__icon"
+                src="./images/burger.svg"
+                alt="menu"
             /></a>
           </div>
+
+          <div class="nav-highlight">
+            <a class="navbar-highligth__link" id="highlight-el" href="#"
+              ><img
+                class="navbar-highlight__icon"
+                src="./images/x-mark-256.png"
+                alt="menu"
+              />
+            </a>
+            <a class="navbar-highlight__item" href="#">Company</a>
+            <a class="navbar-highlight__item" href="#">Marketplace</a>
+            <a class="navbar-highlight__item" href="#">Features</a>
+            <a class="navbar-highlight__item" href="#">Team</a>
+            <a class="navbar-highlight__item" href="#">Contact</a>
+            <a
+              class="navbar-highlight__item navbar-highlight__item--color"
+              href="#"
+              >Log in</a
+            >
+          </div>
+
           <div class="navbar-desktop">
             <div class="navbar-left">
               <a class="navbar-left__item navbar-left__item--size" href="#"
@@ -35,12 +59,15 @@
             </div>
             <div class="navbar-right">
               <a class="navbar-right__item" href="#">Log in</a>
-              <a class="navbar-right__item navbar-right__item--highlight" href="#"
+              <a
+                class="navbar-right__item navbar-right__item--highlight"
+                href="#"
                 >Get started</a
               >
             </div>
           </div>
         </nav>
+
         <div class="header__content">
           <div class="header-description">
             <div class="header-description__title">
@@ -55,6 +82,7 @@
             </div>
             <div class="header-button-container">
               <button
+                id="header-btn"
                 class="header-button header-button--highlight header-button--size"
               >
                 Donate now
@@ -69,40 +97,71 @@
             <div class="header-sponsors">
               <div class="header-sponsors__text">Sponsors:</div>
               <div class="header-sponsors__logo">
-                  <img
-                    class="logo-item"
-                    src="./images/Intel.svg"
-                    alt="intel logo"
-                  />
-                  <img
-                    class="logo-item"
-                    src="./images/Fedex.svg"
-                    alt="fedex logo"
-                  />
-                  <img
-                    class="logo-item"
-                    src="./images/Visa.svg"
-                    alt="visa logo"
-                  />
-                  <img
-                    class="logo-item"
-                    src="./images/Disney.svg"
-                    alt="disney logo"
-                  />
+                <img
+                  class="logo-item"
+                  src="./images/Intel.svg"
+                  alt="intel logo"
+                />
+                <img
+                  class="logo-item"
+                  src="./images/Fedex.svg"
+                  alt="fedex logo"
+                />
+                <img
+                  class="logo-item"
+                  src="./images/Visa.svg"
+                  alt="visa logo"
+                />
+                <img
+                  class="logo-item"
+                  src="./images/Disney.svg"
+                  alt="disney logo"
+                />
               </div>
             </div>
           </div>
 
           <div class="carousel">
             <img
-              class="header-content__img"
+              id="slide1"
+              class="header-content__img header-content__img--active"
               src="./images/card-header.png"
-              alt="picture of nature carousel"
+              alt="picture of nature"
+            />
+            <img
+              id="slide2"
+              class="header-content__img"
+              src="./images/Mockup2-desktop.svg"
+              alt="picture of nature"
+            />
+            <img
+              id="slide3"
+              class="header-content__img"
+              src="./images/Mockup1-desktop.svg"
+              alt="picture of nature"
             />
             <div class="dot">
-              <a href="#"><img class="dots" src="./images/dot-white.png" alt="" /></a>
-              <a href="#"><img class="dots" src="./images/dot-gray.png" alt="" /></a>
-              <a href="#"><img class="dots" src="./images/dot-gray.png" alt="" /></a>
+              <a href="#"
+                ><img
+                  id="dot1"
+                  class="dots"
+                  src="./images/dot-white.png"
+                  alt="dot navigate carousel"
+              /></a>
+              <a href="#"
+                ><img
+                  id="dot2"
+                  class="dots"
+                  src="./images/dot-gray.png"
+                  alt="dot navigate carousel"
+              /></a>
+              <a href="#"
+                ><img
+                  id="dot3"
+                  class="dots"
+                  src="./images/dot-gray.png"
+                  alt="dot navigate carousel"
+              /></a>
             </div>
           </div>
         </div>
@@ -414,6 +473,7 @@
               </p>
               <div class="event-button">
                 <button
+                  id="event-btn1"
                   type="button"
                   class="event__button event__button--highlight"
                 >
@@ -433,8 +493,7 @@
               <div class="event-content">
                 <div class="event__amount">
                   <p class="event__amount-text">
-                    <span class="event__amount-price">$75,856</span>of 150k
-                    goal
+                    <span class="event__amount-price">$75,856</span>of 150k goal
                   </p>
                   <p class="event__amount-text event__amount-text--small">
                     568 donors
@@ -453,6 +512,7 @@
               </p>
               <div class="event-button">
                 <button
+                  id="event-btn2"
                   type="button"
                   class="event__button event__button--highlight"
                 >
@@ -730,5 +790,6 @@
         </div>
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
