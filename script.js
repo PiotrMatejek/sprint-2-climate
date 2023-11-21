@@ -31,47 +31,51 @@ const addActicveClass = (slide) => {
   slide.classList.add("header-content__img--active");
 };
 
-const colorDots = (dotArray) => {
-  for (const char of dotArray) {
-    char.setAttribute("src", "./images/dot-gray.png");
+const dotArray = [];
+
+function colorDot(dot) {
+  for (const ch of dotArray) {
+    if (ch !== dot) {
+      ch.setAttribute("src", "./images/dot-gray.png");
+    } else {
+      dot.setAttribute("src", "./images/dot-white.png");
+    }
   }
 }
 
 const showSlide1 = () => {
   addActicveClass(slide1);
-  dot1.setAttribute("src", "./images/dot-white.png");
-  colorDots([dot2, dot3])
+  colorDot(dot1);
 };
 
 const showSlide2 = () => {
   addActicveClass(slide2);
-  dot2.setAttribute("src", "./images/dot-white.png");
-  colorDots([dot1, dot3])
+  colorDot(dot2);
 };
 
 const showSlide3 = () => {
   addActicveClass(slide3);
-  dot3.setAttribute("src", "./images/dot-white.png");
-  colorDots([dot1, dot2])
+  colorDot(dot3);
 };
 
 dot1.addEventListener("click", () => {
+  dotArray.push(dot1);
   activeSlide();
   showSlide1();
 });
 
 dot2.addEventListener("click", () => {
+  dotArray.push(dot2);
   activeSlide();
   showSlide2();
-  dot2.setAttribute("src", "./images/dot-white.png")
+  dot2.setAttribute("src", "./images/dot-white.png");
 });
 
 dot3.addEventListener("click", () => {
+  dotArray.push(dot3);
   activeSlide();
   showSlide3();
 });
-
-console.log(dot1.getAttribute("src"))
 
 // highlight button for donate in section Header and Event
 const headerBtn = document.getElementById("header-btn");
