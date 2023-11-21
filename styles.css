@@ -63,7 +63,7 @@ nav {
   display: none;
   box-sizing: content-box;
   padding-right: 16px;
-  background: #0a3799;
+  background: rgba(10, 55, 153, 0.75);
   width: 60%;
   min-height: 100vh;
   flex-direction: column;
@@ -72,6 +72,7 @@ nav {
   top: 0;
   right: -16px;
   z-index: 100;
+  backdrop-filter: blur(8px);
 }
 
 .nav-highlight-active {
