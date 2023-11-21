@@ -61,7 +61,8 @@ nav {
 
 .nav-highlight {
   display: none;
-  padding: 10px 16px;
+  box-sizing: content-box;
+  padding-right: 16px;
   background: #0a3799;
   width: 60%;
   min-height: 100vh;
@@ -69,9 +70,8 @@ nav {
   align-items: end;
   position: absolute;
   top: 0;
-  right: 0;
+  right: -16px;
   z-index: 100;
-  margin: 0 auto;
 }
 
 .nav-highlight-active {
@@ -86,10 +86,6 @@ nav {
   scale: 1.1;
 }
 
-.navbar-highlight__item:hover {
-  text-decoration: underline;
-}
-
 .navbar-highlight__item {
   color: var(--text-white);
   text-align: left;
@@ -102,10 +98,23 @@ nav {
   margin: 15px 0;
 }
 
+.navbar-highlight__item::after {
+  content: '';
+  display: block;
+  background: var(--text-white);
+  height: 2px;
+  width: 0;
+  transition: width 0.3s;
+}
+
+.navbar-highlight__item:hover::after {
+  width: 100%;
+}
+
 .navbar-highlight__icon {
-  width: 30px;
-  height: 30px;
-  margin-top: 5px;
+  width: 28px;
+  height: 28px;
+  margin-top: 10px;
 }
 
 .navbar-desktop {
